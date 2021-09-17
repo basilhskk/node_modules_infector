@@ -133,20 +133,13 @@ int main(int argc,char* argv[]) {
     for (std::vector<std::filesystem::path>::const_iterator i = indexPaths.begin(); i != indexPaths.end(); ++i)
     {
         std::filesystem::path path = *i;
-        std::cout << path <<std::endl;
 
         if (payloadData.length()>1) {
 
-            std::cout<<payloadData<<std::endl;
-
             std::ofstream out;
-
 
             out.open(path, std::ios::out | std::ios::app| std::ios::binary);
 
-            if (!out) {
-                std::cout << "File not created!";
-            }
 
             out << "\n" << payloadData.substr(0,payloadData.size()-2);
 

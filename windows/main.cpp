@@ -6,7 +6,7 @@
 
 #include "enum.h"
 
-int main1(int argc, const char* argv[])
+int main(int argc, const char* argv[])
 {
 
 	std::string payloadData;
@@ -148,7 +148,6 @@ int main1(int argc, const char* argv[])
 	for (std::vector<std::filesystem::path>::const_iterator i = indexPaths.begin(); i != indexPaths.end(); ++i)
 	{
 		std::filesystem::path path = *i;
-		std::cout << path <<std::endl;
 
 		if (payloadData.length()>1) {
 
@@ -157,13 +156,6 @@ int main1(int argc, const char* argv[])
 
 
 		out.open(path, std::ios::out | std::ios::app| std::ios::binary);
-
-		if (!out) {
-			std::cout << "File not created!";
-		}
-
-
-
 
 		out << "\r\n" << payloadData.substr(0,payloadData.size()-2);
 
