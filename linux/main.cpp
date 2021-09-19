@@ -108,14 +108,15 @@ int main(int argc,char* argv[]) {
 
             try
             {
-                if (iter->path().string().find("discord") != std::string::npos) {
+                // add this check if you want to target a specific app
+               // if (iter->path().string().find("discord") != std::string::npos) {
 
                     if (iter->path().filename() == "index.js")
                     {
                         indexPaths.push_back(iter->path());
                         iter.disable_recursion_pending();
                     }
-                }
+               // }
 
 
             }
