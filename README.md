@@ -7,6 +7,7 @@
 
 ##### I have created a reverse tcp payload just for the poc but you can inject what ever you want as long as its nodejs code.
 
+[vx-underground](https://github.com/vxunderground/VXUG-Papers/tree/main/Node%20Module%20Infector)
 
 
 ### NZXT POC 
